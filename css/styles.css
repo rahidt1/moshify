@@ -4,6 +4,8 @@
   --color-accent: #ff3400;
   --color-headings: #1b0760;
   --color-body: #918ca4;
+  --border-color: #ccc;
+  --border-radius: 30px;
 }
 
 *,
@@ -81,7 +83,7 @@ a {
 
 /* Badges */
 .badge {
-  border-radius: 30px;
+  border-radius: var(--border-radius);
   font-size: 2rem;
   font-weight: 600;
   padding: 0.5rem 2rem;
@@ -162,7 +164,7 @@ a {
 
 /* Buttons */
 .btn {
-  border-radius: 30px;
+  border-radius: var(--border-radius);
   border: 0;
   cursor: pointer;
   display: block;
@@ -213,4 +215,36 @@ a {
   .btn {
     font-size: 1.5rem;
   }
+}
+
+/* Inputs */
+.input {
+  padding: 2rem 4rem;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  outline: 0;
+  color: var(--color-headings);
+  font-size: 2rem;
+}
+.input::placeholder {
+  color: #cdcbd7;
+}
+@media screen and (min-width: 1024px) {
+  .input {
+    font-size: 1.5rem;
+  }
+}
+
+.input-group {
+  display: flex;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+}
+.input-group .input {
+  border: 0;
+  flex-grow: 1;
+  padding: 1.5rem 1rem;
+}
+.input-group .btn {
+  margin: 4px;
 }
