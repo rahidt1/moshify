@@ -112,6 +112,7 @@ a {
 .list--tick {
   list-style-image: url(../images/tick.svg);
   padding-left: 3rem;
+  color: var(--color-headings);
 }
 .list--tick .list__item {
   padding-left: 0.5rem;
@@ -122,6 +123,7 @@ a {
 .list--tick-inline .list__item {
   display: inline-block;
   margin-left: 1rem;
+  color: var(--color-headings);
 }
 .list--tick-inline .list__item::before {
   margin-right: 1rem;
