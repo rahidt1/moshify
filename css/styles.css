@@ -244,6 +244,7 @@ a {
   border: 0;
   flex-grow: 1;
   padding: 1.5rem 1rem;
+  width: 0;
 }
 .input-group .btn {
   margin: 4px;
