@@ -151,8 +151,15 @@ a {
   width: 40px;
   height: 40px;
 }
+.icon--small {
+  width: 30px;
+  height: 30px;
+}
 .icon--primary {
   fill: var(--color-primary);
+}
+.icon--white {
+  fill: #fff;
 }
 .icon-container {
   display: inline-flex;
@@ -162,6 +169,9 @@ a {
   border-radius: 100%;
   justify-content: center;
   align-items: center;
+}
+.icon-container--accent {
+  background: var(--color-accent);
 }
 
 /* Buttons */
@@ -389,7 +399,41 @@ a {
   .grid--1x2 {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+@media screen and (min-width: 1024px) {
   .grid--1x3 {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Testimonials */
+.testimonial {
+  padding: 3rem;
+  overflow: visible;
+  /* In card component overflow was hidden, thats why icon was cut slightly.
+   So we used overflow here to show full icon. */
+}
+.testimonial__image > img {
+  width: 100%;
+}
+.testimonial__image {
+  position: relative;
+}
+.testimonial__image > .icon-container {
+  position: absolute;
+  top: 1rem;
+  right: -32px;
+}
+
+@media screen and (min-width: 768px) {
+  .testimonial .quote {
+    margin-left: 6rem;
+  }
+  .testimonial .quote,
+  .testimonial .quote__author {
+    font-size: 2.4rem;
+  }
+  .testimonial .quote__company {
+    font-size: 1.6rem;
   }
 }
