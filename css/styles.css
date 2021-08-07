@@ -33,6 +33,7 @@ h2,
 h3 {
   color: var(--color-headings);
   margin-bottom: 1rem;
+  line-height: 1.1;
 }
 h1 {
   font-size: 7rem;
@@ -179,10 +180,10 @@ a {
   border-radius: var(--border-radius);
   border: 0;
   cursor: pointer;
-  display: block;
   font-size: 1.8rem;
   font-weight: 600;
   margin: 1rem 0;
+  outline: 0;
   padding: 2rem 3rem;
   text-align: center;
   text-transform: uppercase;
@@ -221,7 +222,7 @@ a {
 }
 .btn--block {
   width: 100%;
-  display: block;
+  display: inline-block;
 }
 .btn--streched {
   padding-left: 6rem;
@@ -584,5 +585,27 @@ a {
   }
   .nav__item {
     border-bottom: 0;
+  }
+}
+
+/* Hero */
+.hero__tagline {
+  font-size: 2rem;
+  color: #b9c3cf;
+  letter-spacing: 1px;
+  margin: 2rem 0 5rem;
+}
+.hero__image {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    padding-top: 0;
+  }
+  .hero__content {
+    text-align: left;
+  }
+  .hero .container {
+    align-items: center;
   }
 }
