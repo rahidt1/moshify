@@ -228,6 +228,11 @@ a {
   padding-left: 6rem;
   padding-right: 6rem;
 }
+.btn .icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
 @media screen and (min-width: 1024px) {
   .btn {
     font-size: 1.5rem;
@@ -260,7 +265,7 @@ a {
 .input-group .input {
   border: 0;
   flex-grow: 1;
-  padding: 1.5rem 1rem;
+  padding: 1.5rem 2rem;
   width: 0;
 }
 .input-group .btn {
@@ -607,5 +612,29 @@ a {
   }
   .hero .container {
     align-items: center;
+  }
+}
+/* Domain Blocks */
+.block-domain .input-group {
+  box-shadow: 0 0 30px 20px #e6ebee;
+  border: 0;
+  margin: 4rem auto;
+  max-width: 670px;
+}
+.block-domain__price {
+  align-items: center;
+  color: var(--color-headings);
+  display: grid;
+  font-size: 2rem;
+  font-weight: 600;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 6rem);
+  justify-items: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .block-domain__price {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   }
 }
