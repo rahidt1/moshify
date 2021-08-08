@@ -442,11 +442,13 @@ a {
   /* In card component overflow was hidden, thats why icon was cut slightly.
    So we used overflow here to show full icon. */
 }
+
 .testimonial__image > img {
   width: 100%;
 }
 .testimonial__image {
   position: relative;
+  margin: 0 5rem;
 }
 .testimonial__image > .icon-container {
   position: absolute;
@@ -464,6 +466,9 @@ a {
   }
   .testimonial .quote__company {
     font-size: 1.6rem;
+  }
+  .testimonial__image {
+    margin: 0;
   }
 }
 
@@ -534,6 +539,7 @@ a {
 }
 .block__header {
   text-align: center;
+  margin-bottom: 4rem;
 }
 .block__heading {
   margin-top: 0;
