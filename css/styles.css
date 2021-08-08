@@ -335,6 +335,19 @@ a {
   top: -6px;
   width: 40px;
 }
+.plan {
+  transition: transform 0.2s ease-out;
+}
+.plan--popular {
+  transform: scale(1.1);
+}
+.plan:hover {
+  transform: scale(1.05);
+}
+.plan--popular:hover {
+  transform: scale(1.15);
+}
+
 @media screen and (min-width: 1024px) {
   .plan__name {
     font-size: 1.4rem;
@@ -637,4 +650,13 @@ a {
   .block-domain__price {
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   }
+}
+
+/* Plans Block */
+.block-plan .grid {
+  gap: 6rem 4rem;
+}
+.block-plan .card {
+  max-width: 500px;
+  margin: 0 auto;
 }
