@@ -435,8 +435,44 @@ a {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+/* Blocks */
+.block {
+  --padding-vertical: 6rem;
+  padding: var(--padding-vertical) 2rem;
+}
+.block__header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.block__heading {
+  margin-top: 0;
+}
+.block--dark {
+  background: #000;
+  color: #7b858b;
+}
+.block--dark h1,
+.block--dark h2,
+.block--dark h3 {
+  color: #fff;
+}
+.block--skewed-right {
+  padding-bottom: calc(var(--padding-vertical) + 4rem);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
+}
+.block--skewed-left {
+  padding-bottom: calc(var(--padding-vertical) + 4rem);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+}
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
 
 /* Testimonials */
+.block-testimonial {
+  padding-bottom: 0;
+}
 .testimonial {
   padding: 3rem;
   overflow: visible;
@@ -493,6 +529,11 @@ a {
 .callout__content {
   text-align: center;
 }
+
+.callout-position {
+  position: relative;
+  top: 2rem;
+}
 @media screen and (min-width: 768px) {
   .callout .grid--1x2 {
     grid-template-columns: 1fr auto;
@@ -503,6 +544,13 @@ a {
   .callout .btn {
     justify-self: start;
     margin: 0 2rem;
+  }
+  .callout-position {
+    position: relative;
+    top: 7rem;
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
   }
 }
 
@@ -531,40 +579,6 @@ a {
 .collapsible--expanded .collapsible__content {
   max-height: 100%;
   opacity: 1;
-}
-
-/* Blocks */
-.block {
-  --padding-vertical: 6rem;
-  padding: var(--padding-vertical) 2rem;
-}
-.block__header {
-  text-align: center;
-  margin-bottom: 4rem;
-}
-.block__heading {
-  margin-top: 0;
-}
-.block--dark {
-  background: #000;
-  color: #7b858b;
-}
-.block--dark h1,
-.block--dark h2,
-.block--dark h3 {
-  color: #fff;
-}
-.block--skewed-right {
-  padding-bottom: calc(var(--padding-vertical) + 4rem);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
-}
-.block--skewed-left {
-  padding-bottom: calc(var(--padding-vertical) + 4rem);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
-}
-.container {
-  max-width: 1140px;
-  margin: 0 auto;
 }
 
 /* Navigation Bar */
@@ -643,6 +657,9 @@ a {
   }
 }
 /* Domain Blocks */
+.block-domain {
+  padding-bottom: 0;
+}
 .block-domain .input-group {
   box-shadow: 0 0 30px 20px #e6ebee;
   border: 0;
@@ -754,6 +771,9 @@ a {
   margin: 0;
 }
 @media screen and (min-width: 768px) {
+  .footer {
+    padding-top: 10rem;
+  }
   .footer__sections {
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   }
