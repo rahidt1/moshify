@@ -363,10 +363,19 @@
         <div class="card testimonial">
           <div class="grid grid--1x2">
             <div class="testimonial__image">
-              <img
-                src="images/testimonial.jpg"
-                alt="A happy, smiling customer"
-              />
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="
+                    images/testimonial.webp 1x,
+                    images/testimonial.webp 2x
+                  "
+                />
+                <img
+                  src="images/testimonial.jpg"
+                  alt="A happy, smiling customer"
+                />
+              </picture>
               <span class="icon-container icon-container--accent">
                 <svg class="icon icon--small icon--white">
                   <use xlink:href="images/sprite.svg#quotes"></use>
@@ -470,7 +479,9 @@
           </div>
         </section>
         <div class="footer__brand">
-          <a href="/"><img src="images/logo.svg" alt="" /></a>
+          <a aria-label="Moshify" href="/"
+            ><img src="images/logo.svg" alt="Moshify"
+          /></a>
           <p class="footer__copyright">Copyright @ 2020 Mosh</p>
         </div>
       </div>
