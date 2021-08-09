@@ -1,2 +1,5 @@
 playground.html
 css/styles-play.css
+node_modules/
+.cache/
+dist/

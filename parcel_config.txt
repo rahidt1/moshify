@@ -1,0 +1,26 @@
+/* Add Parcel to Project */ 
+1. Install Node.js
+2.npm init -y
+3. npm install parcel-bundler --save-dev
+4. Then, add these tasks scripts to your project, by modifying your package.json:
+    {
+    "scripts": {
+        "dev": "parcel <your entry file>",
+        "build": "parcel build <your entry file>"
+    }
+}
+
+5. Add ".htmlnanorc.js" to the root of the project with this code:
+
+    module.exports = {
+        "minifySvg": false
+    }
+   Otherwise it gives an error ("tree.render is not a function") while building.
+
+6. Then, you will be able to run it:
+
+    # To run in development mode
+    npm run dev
+
+    # To run in production mode
+    npm run build
