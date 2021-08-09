@@ -447,7 +447,7 @@ a {
    So we used overflow here to show full icon. */
 }
 
-.testimonial__image > img {
+.testimonial__image img {
   width: 100%;
 }
 .testimonial__image {
